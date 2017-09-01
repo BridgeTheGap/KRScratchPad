@@ -12,7 +12,35 @@
 		D14C112C1F57D4E000BC1B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14C112A1F57D4E000BC1B26 /* Main.storyboard */; };
 		D14C112E1F57D4E000BC1B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14C112D1F57D4E000BC1B26 /* Assets.xcassets */; };
 		D14C11311F57D4E000BC1B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14C112F1F57D4E000BC1B26 /* LaunchScreen.storyboard */; };
+		D14C11431F58FFE400BC1B26 /* KRScratchPad.h in Headers */ = {isa = PBXBuildFile; fileRef = D14C11411F58FFE400BC1B26 /* KRScratchPad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D14C11461F58FFE400BC1B26 /* KRScratchPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */; };
+		D14C11471F58FFE400BC1B26 /* KRScratchPad.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D14C114C1F58FFF300BC1B26 /* ScatchPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C11381F57D4FB00BC1B26 /* ScatchPad.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D14C11441F58FFE400BC1B26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14C111B1F57D4E000BC1B26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D14C113E1F58FFE400BC1B26;
+			remoteInfo = KRScratchPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D14C114B1F58FFE400BC1B26 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D14C11471F58FFE400BC1B26 /* KRScratchPad.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D14C11231F57D4E000BC1B26 /* ScratchPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +50,22 @@
 		D14C112D1F57D4E000BC1B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14C11301F57D4E000BC1B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D14C11321F57D4E000BC1B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D14C11381F57D4FB00BC1B26 /* ScatchPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatchPad.swift; sourceTree = "<group>"; };
+		D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRScratchPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14C11411F58FFE400BC1B26 /* KRScratchPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRScratchPad.h; sourceTree = "<group>"; };
+		D14C11421F58FFE400BC1B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D14C11201F57D4E000BC1B26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14C11461F58FFE400BC1B26 /* KRScratchPad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14C113B1F58FFE400BC1B26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D14C11251F57D4E000BC1B26 /* ScratchPad */,
+				D14C11401F58FFE400BC1B26 /* KRScratchPad */,
 				D14C11241F57D4E000BC1B26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				D14C11231F57D4E000BC1B26 /* ScratchPad.app */,
+				D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +106,28 @@
 			path = ScratchPad;
 			sourceTree = "<group>";
 		};
+		D14C11401F58FFE400BC1B26 /* KRScratchPad */ = {
+			isa = PBXGroup;
+			children = (
+				D14C11381F57D4FB00BC1B26 /* ScatchPad.swift */,
+				D14C11411F58FFE400BC1B26 /* KRScratchPad.h */,
+				D14C11421F58FFE400BC1B26 /* Info.plist */,
+			);
+			path = KRScratchPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D14C113C1F58FFE400BC1B26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14C11431F58FFE400BC1B26 /* KRScratchPad.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D14C11221F57D4E000BC1B26 /* ScratchPad */ = {
@@ -74,15 +137,35 @@
 				D14C111F1F57D4E000BC1B26 /* Sources */,
 				D14C11201F57D4E000BC1B26 /* Frameworks */,
 				D14C11211F57D4E000BC1B26 /* Resources */,
+				D14C114B1F58FFE400BC1B26 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D14C11451F58FFE400BC1B26 /* PBXTargetDependency */,
 			);
 			name = ScratchPad;
 			productName = ScratchPad;
 			productReference = D14C11231F57D4E000BC1B26 /* ScratchPad.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D14C113E1F58FFE400BC1B26 /* KRScratchPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14C11481F58FFE400BC1B26 /* Build configuration list for PBXNativeTarget "KRScratchPad" */;
+			buildPhases = (
+				D14C113A1F58FFE400BC1B26 /* Sources */,
+				D14C113B1F58FFE400BC1B26 /* Frameworks */,
+				D14C113C1F58FFE400BC1B26 /* Headers */,
+				D14C113D1F58FFE400BC1B26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KRScratchPad;
+			productName = KRScratchPad;
+			productReference = D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +178,10 @@
 				ORGANIZATIONNAME = Knowre;
 				TargetAttributes = {
 					D14C11221F57D4E000BC1B26 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					D14C113E1F58FFE400BC1B26 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -113,6 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D14C113E1F58FFE400BC1B26 /* KRScratchPad */,
 				D14C11221F57D4E000BC1B26 /* ScratchPad */,
 			);
 		};
@@ -129,6 +217,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D14C113D1F58FFE400BC1B26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +236,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D14C113A1F58FFE400BC1B26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14C114C1F58FFF300BC1B26 /* ScatchPad.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D14C11451F58FFE400BC1B26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D14C113E1F58FFE400BC1B26 /* KRScratchPad */;
+			targetProxy = D14C11441F58FFE400BC1B26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D14C112A1F57D4E000BC1B26 /* Main.storyboard */ = {
@@ -211,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -273,10 +384,12 @@
 		D14C11361F57D4E000BC1B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
 				INFOPLIST_FILE = ScratchPad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ScratchPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,15 +401,67 @@
 		D14C11371F57D4E000BC1B26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
 				INFOPLIST_FILE = ScratchPad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ScratchPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D14C11491F58FFE400BC1B26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KRScratchPad/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.KRScratchPad;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D14C114A1F58FFE400BC1B26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KRScratchPad/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.KRScratchPad;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -317,6 +482,15 @@
 			buildConfigurations = (
 				D14C11361F57D4E000BC1B26 /* Debug */,
 				D14C11371F57D4E000BC1B26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14C11481F58FFE400BC1B26 /* Build configuration list for PBXNativeTarget "KRScratchPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14C11491F58FFE400BC1B26 /* Debug */,
+				D14C114A1F58FFE400BC1B26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
