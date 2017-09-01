@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D12E59C91F5CDFF1002B0815 /* ScatchPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CAD521F59253400D7D18C /* ScatchPad.swift */; };
 		D14C11271F57D4E000BC1B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C11261F57D4E000BC1B26 /* AppDelegate.swift */; };
 		D14C11291F57D4E000BC1B26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C11281F57D4E000BC1B26 /* ViewController.swift */; };
 		D14C112C1F57D4E000BC1B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14C112A1F57D4E000BC1B26 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		D14C11431F58FFE400BC1B26 /* KRScratchPad.h in Headers */ = {isa = PBXBuildFile; fileRef = D14C11411F58FFE400BC1B26 /* KRScratchPad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D14C11461F58FFE400BC1B26 /* KRScratchPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */; };
 		D14C11471F58FFE400BC1B26 /* KRScratchPad.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D14C114C1F58FFF300BC1B26 /* ScatchPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C11381F57D4FB00BC1B26 /* ScatchPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D12CAD521F59253400D7D18C /* ScatchPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatchPad.swift; sourceTree = "<group>"; };
 		D14C11231F57D4E000BC1B26 /* KRScratchPad_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRScratchPad_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14C11261F57D4E000BC1B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14C11281F57D4E000BC1B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		D14C112D1F57D4E000BC1B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14C11301F57D4E000BC1B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D14C11321F57D4E000BC1B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D14C11381F57D4FB00BC1B26 /* ScatchPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatchPad.swift; sourceTree = "<group>"; };
 		D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRScratchPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14C11411F58FFE400BC1B26 /* KRScratchPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRScratchPad.h; sourceTree = "<group>"; };
 		D14C11421F58FFE400BC1B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D12CAD511F59253400D7D18C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D12CAD521F59253400D7D18C /* ScatchPad.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D14C111A1F57D4E000BC1B26 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +117,7 @@
 		D14C11401F58FFE400BC1B26 /* KRScratchPad */ = {
 			isa = PBXGroup;
 			children = (
-				D14C11381F57D4FB00BC1B26 /* ScatchPad.swift */,
+				D12CAD511F59253400D7D18C /* Classes */,
 				D14C11411F58FFE400BC1B26 /* KRScratchPad.h */,
 				D14C11421F58FFE400BC1B26 /* Info.plist */,
 			);
@@ -240,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14C114C1F58FFF300BC1B26 /* ScatchPad.swift in Sources */,
+				D12E59C91F5CDFF1002B0815 /* ScatchPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
