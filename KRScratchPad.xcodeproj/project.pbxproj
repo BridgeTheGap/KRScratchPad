@@ -43,7 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D14C11231F57D4E000BC1B26 /* ScratchPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14C11231F57D4E000BC1B26 /* KRScratchPad_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRScratchPad_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14C11261F57D4E000BC1B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14C11281F57D4E000BC1B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D14C112B1F57D4E000BC1B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		D14C111A1F57D4E000BC1B26 = {
 			isa = PBXGroup;
 			children = (
-				D14C11251F57D4E000BC1B26 /* ScratchPad */,
+				D14C11251F57D4E000BC1B26 /* KRScratchPad_Example */,
 				D14C11401F58FFE400BC1B26 /* KRScratchPad */,
 				D14C11241F57D4E000BC1B26 /* Products */,
 			);
@@ -87,13 +87,13 @@
 		D14C11241F57D4E000BC1B26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D14C11231F57D4E000BC1B26 /* ScratchPad.app */,
+				D14C11231F57D4E000BC1B26 /* KRScratchPad_Example.app */,
 				D14C113F1F58FFE400BC1B26 /* KRScratchPad.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D14C11251F57D4E000BC1B26 /* ScratchPad */ = {
+		D14C11251F57D4E000BC1B26 /* KRScratchPad_Example */ = {
 			isa = PBXGroup;
 			children = (
 				D14C11261F57D4E000BC1B26 /* AppDelegate.swift */,
@@ -103,7 +103,7 @@
 				D14C112F1F57D4E000BC1B26 /* LaunchScreen.storyboard */,
 				D14C11321F57D4E000BC1B26 /* Info.plist */,
 			);
-			path = ScratchPad;
+			path = KRScratchPad_Example;
 			sourceTree = "<group>";
 		};
 		D14C11401F58FFE400BC1B26 /* KRScratchPad */ = {
@@ -130,9 +130,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D14C11221F57D4E000BC1B26 /* ScratchPad */ = {
+		D14C11221F57D4E000BC1B26 /* KRScratchPad_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D14C11351F57D4E000BC1B26 /* Build configuration list for PBXNativeTarget "ScratchPad" */;
+			buildConfigurationList = D14C11351F57D4E000BC1B26 /* Build configuration list for PBXNativeTarget "KRScratchPad_Example" */;
 			buildPhases = (
 				D14C111F1F57D4E000BC1B26 /* Sources */,
 				D14C11201F57D4E000BC1B26 /* Frameworks */,
@@ -144,9 +144,9 @@
 			dependencies = (
 				D14C11451F58FFE400BC1B26 /* PBXTargetDependency */,
 			);
-			name = ScratchPad;
+			name = KRScratchPad_Example;
 			productName = ScratchPad;
-			productReference = D14C11231F57D4E000BC1B26 /* ScratchPad.app */;
+			productReference = D14C11231F57D4E000BC1B26 /* KRScratchPad_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D14C113E1F58FFE400BC1B26 /* KRScratchPad */ = {
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D14C111E1F57D4E000BC1B26 /* Build configuration list for PBXProject "ScratchPad" */;
+			buildConfigurationList = D14C111E1F57D4E000BC1B26 /* Build configuration list for PBXProject "KRScratchPad" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -200,8 +200,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D14C11221F57D4E000BC1B26 /* KRScratchPad_Example */,
 				D14C113E1F58FFE400BC1B26 /* KRScratchPad */,
-				D14C11221F57D4E000BC1B26 /* ScratchPad */,
 			);
 		};
 /* End PBXProject section */
@@ -388,10 +388,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
-				INFOPLIST_FILE = ScratchPad/Info.plist;
+				INFOPLIST_FILE = KRScratchPad_Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ScratchPad;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knowre.KRScratchPad-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,10 +405,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
-				INFOPLIST_FILE = ScratchPad/Info.plist;
+				INFOPLIST_FILE = KRScratchPad_Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ScratchPad;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knowre.KRScratchPad-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,7 +468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D14C111E1F57D4E000BC1B26 /* Build configuration list for PBXProject "ScratchPad" */ = {
+		D14C111E1F57D4E000BC1B26 /* Build configuration list for PBXProject "KRScratchPad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D14C11331F57D4E000BC1B26 /* Debug */,
@@ -477,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D14C11351F57D4E000BC1B26 /* Build configuration list for PBXNativeTarget "ScratchPad" */ = {
+		D14C11351F57D4E000BC1B26 /* Build configuration list for PBXNativeTarget "KRScratchPad_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D14C11361F57D4E000BC1B26 /* Debug */,
