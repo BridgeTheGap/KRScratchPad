@@ -25,6 +25,16 @@ open class ScratchPad: UIView {
     
     // MARK: - Interface
     
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = UIColor.clear
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        backgroundColor = UIColor.clear
+    }
+    
     override open func draw(_ rect: CGRect) {
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         
