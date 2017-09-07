@@ -58,19 +58,26 @@ open class ScratchPad: UIView {
     }
     
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.register(touch: touches.first!)
+        register(touch: touches.first!)
     }
     
     override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.register(touch: touches.first!)
+        register(touch: touches.first!)
     }
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.register(touch: touches.first!, isLast: true)
+        register(touch: touches.first!, isLast: true)
     }
     
     override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.register(touch: touches.first!, isLast: true)
+        path = UIBezierPath()
+        setNeedsDisplay()
+    }
+    
+    open func clear() {
+        path = UIBezierPath()
+        image = nil
+        setNeedsDisplay()
     }
     
     // MARK: - Private
@@ -110,7 +117,7 @@ open class ScratchPad: UIView {
             path = UIBezierPath()
         }
         
-        self.setNeedsDisplay()
+        setNeedsDisplay()
     }
     
 }
