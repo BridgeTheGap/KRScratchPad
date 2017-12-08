@@ -36,10 +36,8 @@ open class ScratchPad: UIView {
     }
     
     override open func draw(_ rect: CGRect) {
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        
-        if let image = self.image, rect == bounds {
-            image.draw(in: rect)
+        if let image = self.image {
+            image.draw(in: bounds)
         }
         
         if path.bounds.intersects(rect) {
@@ -50,11 +48,6 @@ open class ScratchPad: UIView {
             path.stroke(with: isDrawingMode ? .normal : .clear,
                         alpha: 1.0)
         }
-        
-        let viewImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        viewImage?.draw(in: rect)
     }
     
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -88,14 +81,16 @@ open class ScratchPad: UIView {
                            y: (p1.y + p2.y) * 0.5)
         }
 
-        let p1 = touch.location(in: self)
-        let p2 = touch.previousLocation(in: self)
+        let p = touch.location(in: self)
+        let pp1 = touch.previousLocation(in: self)
+        let pp2 = path.isEmpty ? p : path.currentPoint
+        let mp = midPoint(for: p, p2: pp1)
         
         if path.isEmpty {
-            path.move(to: p1)
+            path.move(to: p)
         } else {
-            path.addQuadCurve(to: isLast ? p1 : midPoint(for: p1, p2: p2),
-                              controlPoint: p2)
+            path.addQuadCurve(to: isLast ? p : mp,
+                              controlPoint: pp1)
         }
         
         if isLast {
@@ -117,7 +112,32 @@ open class ScratchPad: UIView {
             path = UIBezierPath()
         }
         
-        setNeedsDisplay()
+        let padding = lineWidth * 2
+        
+        
+        let x1 = isLast ? p.x : mp.x
+        let y1 = isLast ? p.y : mp.y
+
+        let origin1 = CGPoint(x: min(pp1.x, x1),
+                              y: min(pp1.y, y1))
+        let size1 = CGSize(width: abs(x1 - pp1.x),
+                           height: abs(y1 - pp1.y))
+        let rect1 = CGRect(origin: origin1,
+                           size: size1)
+            .insetBy(dx: -padding,
+                     dy: -padding)
+        
+        let origin2 = CGPoint(x: min(pp1.x, pp2.x),
+                              y: min(pp1.y, pp2.y))
+        let size2 = CGSize(width: abs(pp2.x - pp1.x),
+                           height: abs(pp2.y - pp1.y))
+        let rect2 = CGRect(origin: origin2,
+                           size: size2)
+            .insetBy(dx: -padding,
+                     dy: -padding)
+        
+        setNeedsDisplay(rect2)
+        setNeedsDisplay(rect1)
     }
     
 }
