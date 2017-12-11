@@ -112,8 +112,7 @@ open class ScratchPad: UIView {
             path = UIBezierPath()
         }
         
-        let padding = lineWidth * 2
-        
+        let padding = (isDrawingMode ? lineWidth : eraserWidth)*2
         
         let x1 = isLast ? p.x : mp.x
         let y1 = isLast ? p.y : mp.y
