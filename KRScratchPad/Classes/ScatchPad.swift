@@ -16,6 +16,10 @@ open class ScratchPad: UIView {
     open var lineWidth: CGFloat = 1.5
     open var eraserWidth: CGFloat = 20.0
     
+    public final var isEmpty: Bool {
+        return image == nil
+    }
+    
     private var path: UIBezierPath = {
         let path = UIBezierPath()
         path.lineCapStyle = .round

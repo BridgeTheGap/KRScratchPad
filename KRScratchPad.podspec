@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KRScratchPad"
-  s.version      = "1.0.1.2"
+  s.version      = "1.0.1.3"
   s.summary      = "A scratch pad"
   s.description  = <<-DESC
 The ScratchPad view allows users to easily draw/erase natural-looking strokes on a view.
