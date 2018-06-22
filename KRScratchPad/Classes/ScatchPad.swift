@@ -8,14 +8,38 @@
 
 import UIKit
 
+/**
+ ScratchPad allows users to easily draw/erase natural-looking strokes on a view.
+ */
 open class ScratchPad: UIView {
     
+    /// A boolean value that indicates whether the ScratchPad is in a drawing mode.
     open var isDrawingMode: Bool = true
     
+    /// The color of the drawn line.
     open var lineColor: UIColor = .black
+    
+    /// The width of the drawn line.
     open var lineWidth: CGFloat = 1.5
+    
+    /// The width of the erased line.
     open var eraserWidth: CGFloat = 20.0
     
+    /**
+     A boolean value that indicates whether
+     there is any history of drawing or erasing.
+     
+     If the user draws a line and erases it,
+     the value of `isEmpty` will return `false`,
+     since there is history of drawing.
+     
+     The value will be `true` only when the view has
+     no history of drawing or after `clear()` has been called.
+     
+     - Note: This property is subject to change in the future
+        to indicate whether there are any visible lines
+        currently present on the view.
+     */
     public final var isEmpty: Bool {
         return image == nil
     }
@@ -25,6 +49,8 @@ open class ScratchPad: UIView {
         path.lineCapStyle = .round
         return path
     }()
+    
+    /// An composite image of the past drawing and erasing strokes.
     private var image: UIImage?
     
     // MARK: - Interface
@@ -71,6 +97,7 @@ open class ScratchPad: UIView {
         setNeedsDisplay()
     }
     
+    /// Clears all strokes on the ScratchPad.
     open func clear() {
         path = UIBezierPath()
         image = nil
